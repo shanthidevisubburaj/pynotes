@@ -1,8 +1,8 @@
 
 
-AUTHOR          = '<your name>'  # use your name
-SITENAME        = 'title' # use title
-GITHUB_USERNAME = 'tactlabs' # use your username
+AUTHOR          = '<Shanthi devi>'  # use your name
+SITENAME        = 'My Pynotes Notes' # use title
+GITHUB_USERNAME = 'shanthisubburaj' # use your username
 
 
 # Blogroll
@@ -12,8 +12,8 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("GitHub", "https://github.com/<yourusername>/"),
-    ("LinkedIn", "<linkedin handle>"),
+    ("GitHub", "https://github.com/shanthidevisubburaj"),
+    ("LinkedIn", "https://www.linkedin.com/shanthidevisubburaj"),
 )
 
 ######## Advanced Settings (not recommended to to edited; take your own risk to touch the settings below) #############
