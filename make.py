@@ -65,7 +65,11 @@ def convert_notebooks_to_markdown(notebook_dir, output_dir, fresh = False):
             str(output_subdir),
             str(notebook),
         ]
-        subprocess.run(cmd, check=True)
+        try:
+            subprocess.run(cmd, check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Skipping {notebook}: nbconvert failed (not a valid notebook). Error: {e}")
+            continue
 
          # Get the generated Markdown file path
         md_file = output_subdir / f"{notebook.stem}.md"

@@ -2,7 +2,7 @@
 
 AUTHOR          = '<Shanthi devi>'  # use your name
 SITENAME        = 'My Pynotes Notes' # use title
-GITHUB_USERNAME = 'shanthisubburaj' # use your username
+GITHUB_USERNAME = 'shanthidevisubburaj' # use your username
 
 
 # Blogroll
@@ -39,7 +39,7 @@ else:
 
 OUTPUT_PATH     = 'docs'
 PATH            = "content"
-TIMEZONE        = 'America/Toronto'
+TIMEZONE        = 'Asia/kolkata'
 DEFAULT_LANG    = 'en'
 
 # Feed generation is usually not desired when developing
