@@ -1,8 +1,22 @@
+---
+title: Untitled
+date: 2026-05-03
+author: Your Name
+cell_count: 4
+score: 0
+---
+
+```python
 import random
 random.seed(0)
 print(random.randint(1, 5))
+```
+
+    4
+    
 
 
+```python
 import random
 
 number = random.randint(1, 100)
@@ -14,8 +28,16 @@ elif guess < number:
     print("Too low! The number was", number)
 else:
     print("Too high! The number was", number)
+```
+
+    Guess the number (1-100):  56
+    
+
+    Too low! The number was 98
+    
 
 
+```python
 import datetime
 
 now = datetime.datetime.now()
@@ -23,6 +45,18 @@ now = datetime.datetime.now()
 print("Current Date:", now.strftime("%d-%m-%Y"))
 print("Current Time:", now.strftime("%H:%M:%S"))
 print("Day:", now.strftime("%A"))
+```
+
+    Current Date: 03-05-2026
+    Current Time: 09:55:22
+    Day: Sunday
+    
 
 
+```python
 
+```
+
+
+---
+**Score: 0**
