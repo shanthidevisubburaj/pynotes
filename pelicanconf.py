@@ -39,7 +39,7 @@ else:
 
 OUTPUT_PATH     = 'docs'
 PATH            = "content"
-TIMEZONE        = 'Asia/kolkata'
+TIMEZONE        = 'Asia/Kolkata'
 DEFAULT_LANG    = 'en'
 
 # Feed generation is usually not desired when developing
@@ -53,7 +53,7 @@ DEFAULT_PAGINATION          = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # Use SITEURL for absolute paths; RELATIVE_URLS is typically for local preview
-RELATIVE_URLS = False
+# RELATIVE_URLS = False  # Already set above based on PELICAN_ENV
 
 # Ensure unique output paths
 ARTICLE_URL = '{slug}.html'
