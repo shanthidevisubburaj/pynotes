@@ -13,7 +13,7 @@
             </tr>
         </thead>
 
-        {% set total_score = dates | map(attribute='metadata.score') | map('int') | sum %}
+        {% set total_score = dates | selectattr('metadata.score', 'defined') | map(attribute='metadata.score') | map('int') | sum %}
 
         <!-- Display the total score -->
         <p><strong>Overall Score:</strong> {{ total_score }}</p>
