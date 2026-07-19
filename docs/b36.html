@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>B36</title>
+
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://shanthidevisubburaj.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://shanthidevisubburaj.github.io/pynotes">My Pynotes Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://shanthidevisubburaj.github.io/pynotes/b36.html" rel="bookmark"
+        title="Permalink to B36">B36</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="n">text</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter message: &quot;</span><span class="p">)</span>
+
+<span class="n">key</span><span class="o">=</span><span class="mi">3</span>
+
+<span class="n">encrypted</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">encrypted</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encrypted:&quot;</span><span class="p">,</span><span class="n">encrypted</span><span class="p">)</span>
+
+
+<span class="n">decrypted</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">encrypted</span><span class="p">:</span>
+    <span class="n">decrypted</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span><span class="o">-</span><span class="n">key</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decrypted:&quot;</span><span class="p">,</span><span class="n">decrypted</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter message:  hii
+
+
+Encrypted: kll
+Decrypted: hii
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;City&quot;</span><span class="p">:[</span><span class="s2">&quot;Chennai&quot;</span><span class="p">,</span><span class="s2">&quot;Salem&quot;</span><span class="p">,</span><span class="s2">&quot;Madurai&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Temperature&quot;</span><span class="p">:[</span><span class="mi">35</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">36</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Average Temperature:&quot;</span><span class="p">,</span>
+      <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Highest Temperature:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="w">      </span><span class="nx">City</span><span class="w">  </span><span class="nx">Temperature</span>
+<span class="mi">0</span><span class="w">  </span><span class="nx">Chennai</span><span class="w">           </span><span class="mi">35</span>
+<span class="mi">1</span><span class="w">    </span><span class="nx">Salem</span><span class="w">           </span><span class="mi">33</span>
+<span class="mi">2</span><span class="w">  </span><span class="nx">Madurai</span><span class="w">           </span><span class="mi">36</span>
+
+<span class="nx">Average</span><span class="w"> </span><span class="nx">Temperature</span><span class="p">:</span><span class="w"> </span><span class="m m-Double">34.666666666666664</span>
+
+<span class="nx">Highest</span><span class="w"> </span><span class="nx">Temperature</span><span class="p">:</span>
+<span class="nx">City</span><span class="w">           </span><span class="nx">Madurai</span>
+<span class="nx">Temperature</span><span class="w">         </span><span class="mi">36</span>
+<span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nx">dtype</span><span class="p">:</span><span class="w"> </span><span class="nx">object</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">responses</span><span class="o">=</span><span class="p">{</span>
+<span class="s2">&quot;hello&quot;</span><span class="p">:</span><span class="s2">&quot;Hi! How can I help?&quot;</span><span class="p">,</span>
+<span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;I am Python AI Bot&quot;</span><span class="p">,</span>
+<span class="s2">&quot;bye&quot;</span><span class="p">:</span><span class="s2">&quot;Goodbye&quot;</span>
+<span class="p">}</span>
+
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+
+    <span class="n">user</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;You: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot:&quot;</span><span class="p">,</span><span class="n">responses</span><span class="p">[</span><span class="n">user</span><span class="p">])</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: I don&#39;t understand&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">user</span><span class="o">==</span><span class="s2">&quot;bye&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">You</span><span class="o">:</span><span class="w">  </span><span class="n">hii</span><span class="w"> </span><span class="n">what</span>
+
+
+<span class="n">Bot</span><span class="o">:</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">don</span><span class="s1">&#39;t understand</span>
+
+
+<span class="s1">You:  kill</span>
+
+
+<span class="s1">Bot: I don&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">understand</span>
+
+
+<span class="n">You</span><span class="o">:</span><span class="w">  </span><span class="n">goodbye</span>
+
+
+<span class="n">Bot</span><span class="o">:</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">don</span><span class="err">&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">understand</span>
+
+
+<span class="n">You</span><span class="o">:</span><span class="w">  </span><span class="n">bye</span>
+
+
+<span class="n">Bot</span><span class="o">:</span><span class="w"> </span><span class="n">Goodbye</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p>
+<p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a></li>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/shanthidevisubburaj">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/shanthidevisubburaj">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Pynotes Notes by <Shanthi devi></p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

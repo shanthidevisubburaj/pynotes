@@ -48,15 +48,28 @@
 
             <article>
                 <a href="https://shanthidevisubburaj.github.io/pynotes/a19.html"><h3 class="article-title">A19</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
 
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deposited ₹</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Withdrawn ₹</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insufficient Balance&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Account …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
 
 </p>
 
@@ -71,7 +84,7 @@
 
             <article>
                 <a href="https://shanthidevisubburaj.github.io/pynotes/a2.html"><h3 class="article-title">A2</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
@@ -120,7 +133,7 @@ Even
 
             <article>
                 <a href="https://shanthidevisubburaj.github.io/pynotes/a20.html"><h3 class="article-title">A20</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
@@ -164,7 +177,7 @@ Even
 
             <article>
                 <a href="https://shanthidevisubburaj.github.io/pynotes/a21.html"><h3 class="article-title">A21</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
@@ -200,16 +213,16 @@ Even
 
             <article>
                 <a href="https://shanthidevisubburaj.github.io/pynotes/a22.html"><h3 class="article-title">A22</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Node</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">has_cycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">has_cycle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
     <span class="n">slow</span><span class="p">,</span> <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="n">head</span>
     <span class="k">while</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
         <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="o">.</span><span class="n">next</span>
@@ -233,36 +246,46 @@ Even
 
 
             <article>
-                <a href="https://shanthidevisubburaj.github.io/pynotes/a3.html"><h3 class="article-title">A3</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+                <a href="https://shanthidevisubburaj.github.io/pynotes/a23.html"><h3 class="article-title">A23</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Python!&quot;</span><span class="p">)</span>
-<span class="n">greet</span><span class="p">()</span>
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a23.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://shanthidevisubburaj.github.io/pynotes/a24.html"><h3 class="article-title">A24</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span>
+
+<span class="n">current_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">current_date</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Welcome to Python!
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">zoneinfo</span> <span class="kn">import</span> <span class="n">ZoneInfo</span>
+
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">ZoneInfo</span><span class="p">(</span><span class="s2">&quot;UTC&quot;</span><span class="p">))</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result:&quot;</span><span class="p">,</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Result</span><span class="o">:</span><span class="w"> </span><span class="mi">30</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>apple
-banana
-cherry
+<span class="n">future</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
@@ -275,7 +298,7 @@ cherry
 
 
 
-                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a3.html">Read More</a>
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a24.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -283,22 +306,41 @@ cherry
 
 
             <article>
-                <a href="https://shanthidevisubburaj.github.io/pynotes/a4.html"><h3 class="article-title">A4</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+                <a href="https://shanthidevisubburaj.github.io/pynotes/a25.html"><h3 class="article-title">A25</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">integer_value</span> <span class="o">=</span> <span class="mi">10</span>       <span class="c1"># int</span>
+<span class="n">float_value</span> <span class="o">=</span> <span class="mf">3.5</span>       <span class="c1"># float</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">integer_value</span> <span class="o">+</span> <span class="n">float_value</span>  <span class="c1"># int + float → float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>           <span class="c1"># Output: 13.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>     <span class="c1"># Output: &lt;class &#39;float&#39;&gt;</span>
 </code></pre></div>
 
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+<div class="highlight"><pre><span></span><code><span class="mf">13.5</span>
+<span class="o">&lt;</span><span class="n">class</span><span class="w"> </span><span class="err">&#39;</span><span class="n">float</span><span class="err">&#39;</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">float_value</span> <span class="o">=</span> <span class="mf">9.99</span>
+<span class="n">string_value</span> <span class="o">=</span> <span class="s2">&quot;42&quot;</span>
+
+<span class="n">int_from_float</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">float_value</span><span class="p">)</span>
+<span class="n">int_from_string</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string_value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int_from_float</span><span class="p">)</span>    <span class="c1"># Output: 9   (fraction truncated)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">int_from_string</span><span class="p">)</span>   <span class="c1"># Output: 42</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">9 …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a4.html">Read More</a>
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a25.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -306,47 +348,39 @@ cherry
 
 
             <article>
-                <a href="https://shanthidevisubburaj.github.io/pynotes/a5.html"><h3 class="article-title">A5</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+                <a href="https://shanthidevisubburaj.github.io/pynotes/a26.html"><h3 class="article-title">A26</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Factorial:&quot;</span><span class="p">,</span> <span class="n">fact</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">int_value</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">float_value</span> <span class="o">=</span> <span class="mf">25.5</span>
+<span class="n">bool_value</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">str_int</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">int_value</span><span class="p">)</span>
+<span class="n">str_float</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">float_value</span><span class="p">)</span>
+<span class="n">str_bool</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">bool_value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">str_int</span><span class="p">)</span>    <span class="c1"># Output: &#39;100&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_float</span><span class="p">)</span>  <span class="c1"># Output: &#39;25.5&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_bool</span><span class="p">)</span>   <span class="c1"># Output: &#39;True&#39;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">Factorial</span><span class="o">:</span><span class="w"> </span><span class="mi">120</span>
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+<span class="mf">25.5</span>
+<span class="n">True</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">0</span>
-<span class="mf">1</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">5</span>
-<span class="mf">8</span>
-<span class="mf">13</span>
-<span class="mf">21</span>
-<span class="mf">34</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reversed:&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1 …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>        <span class="c1"># Output: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>        <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>       <span class="c1"># Output: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;text …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a5.html">Read More</a>
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a26.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -354,89 +388,42 @@ cherry
 
 
             <article>
-                <a href="https://shanthidevisubburaj.github.io/pynotes/a6.html"><h3 class="article-title">A6</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+                <a href="https://shanthidevisubburaj.github.io/pynotes/a27.html"><h3 class="article-title">A27</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Largest:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">pairs_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="n">pairs_tuple</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="n">dict_from_list</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pairs_list</span><span class="p">)</span>
+<span class="n">dict_from_tuple</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pairs_tuple</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_from_list</span><span class="p">)</span>   <span class="c1"># Output: {&#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_from_tuple</span><span class="p">)</span>  <span class="c1"># Output: {&#39;x&#39;: 10, &#39;y&#39;: 20}</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">Largest</span><span class="o">:</span><span class="w"> </span><span class="mi">50</span>
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2}
+{&#39;x&#39;: 10, &#39;y&#39;: 20}
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square:&quot;</span><span class="p">,</span> <span class="n">num</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Square</span><span class="o">:</span><span class="w"> </span><span class="mi">36</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>a = 20 b = 10
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">safe_int_convert</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a6.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://shanthidevisubburaj.github.io/pynotes/a7.html"><h3 class="article-title">A7</h3></a>
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">17</span>
-<span class="n">is_prime</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">is_prime</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">break</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prime?&quot;</span> <span class="p">,</span> <span class="n">is_prime</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Prime? True
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">7</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7</span>
-<span class="mf">7</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14</span>
-<span class="mf">7</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21</span>
-<span class="mf">7</span><span class="w"> </span><span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a7.html">Read More</a>
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/a27.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 5</h6>
+<h6 class="subheader">Page 2 of 6</h6>
 
 <p>
             <a href="https://shanthidevisubburaj.github.io/pynotes/author/your-name.html">&laquo; Prev</a>

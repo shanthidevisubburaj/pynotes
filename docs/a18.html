@@ -48,11 +48,11 @@
         title="Permalink to A18">A18</a></h3>
     </header>
 
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>   <span class="c1"># olleh</span>
@@ -63,7 +63,7 @@
 nohtyp
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
@@ -76,7 +76,7 @@ nohtyp
 <span class="mf">3628800</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">count_vowels</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">count_vowels</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">vowels</span> <span class="o">=</span> <span class="s2">&quot;aeiouAEIOU&quot;</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">if</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">)</span>
 

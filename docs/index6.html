@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Pynotes Notes</title>
+
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://shanthidevisubburaj.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://shanthidevisubburaj.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://shanthidevisubburaj.github.io/pynotes">My Pynotes Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://shanthidevisubburaj.github.io/pynotes/b38.html"><h3 class="article-title">B38</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="n">password</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter password:&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weak Password&quot;</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;[A-Z]&quot;</span><span class="p">,</span><span class="n">password</span><span class="p">)</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;[0-9]&quot;</span><span class="p">,</span><span class="n">password</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Strong Password&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Medium Password&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter password: 4566
+
+
+Weak Password
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">MultinomialNB</span>
+
+
+<span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+<span class="s2">&quot;Win money now …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/b38.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://shanthidevisubburaj.github.io/pynotes/b39.html"><h3 class="article-title">B39</h3></a>
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">balance</span> <span class="o">=</span> <span class="mi">5000</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1.Check Balance&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2.Deposit&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3.Withdraw&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4.Exit&quot;</span><span class="p">)</span>
+
+    <span class="n">ch</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Balance:&quot;</span><span class="p">,</span> <span class="n">balance</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">amt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Amount: &quot;</span><span class="p">))</span>
+        <span class="n">balance</span> <span class="o">+=</span> <span class="n">amt</span>
+
+    <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">amt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Amount: &quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">amt</span> <span class="o">&lt;=</span> <span class="n">balance</span><span class="p">:</span>
+            <span class="n">balance</span> <span class="o">-=</span> <span class="n">amt</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://shanthidevisubburaj.github.io/pynotes/b39.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 6 of 6</h6>
+
+<p>
+            <a href="https://shanthidevisubburaj.github.io/pynotes/index5.html">&laquo; Prev</a>
+
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/a1py.html">a1.py</a></li>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://shanthidevisubburaj.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/shanthidevisubburaj">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/shanthidevisubburaj">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Pynotes Notes by <Shanthi devi></p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

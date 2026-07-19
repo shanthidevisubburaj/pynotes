@@ -48,11 +48,130 @@
         title="Permalink to A19">A19</a></h3>
     </header>
 
-<h6 class="subheader" title="2026-05-03T00:00:00+05:30">Sun 03 May 2026
+<h6 class="subheader" title="2026-07-19T00:00:00+05:30">Sun 19 July 2026
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code>
+    <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deposited ₹</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Withdrawn ₹</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insufficient Balance&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Account Holder: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current Balance: ₹</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">acc</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="s2">&quot;Shanthi&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+
+<span class="n">acc</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">acc</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="n">acc</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Deposited ₹5000
+Withdrawn ₹2000
+
+Account Holder: Shanthi
+Current Balance: ₹13000
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">books</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Python&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;Java&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;AI&quot;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1.View Books&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2.Borrow Book&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3.Return Book&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4.Exit&quot;</span><span class="p">)</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choice: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">book</span><span class="p">,</span> <span class="n">status</span> <span class="ow">in</span> <span class="n">books</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;Available&quot;</span> <span class="k">if</span> <span class="n">status</span> <span class="k">else</span> <span class="s2">&quot;Borrowed&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Book Name: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">books</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">book</span><span class="p">):</span>
+            <span class="n">books</span><span class="p">[</span><span class="n">book</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book Borrowed&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book Not Available&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+        <span class="n">book</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Book Name: &quot;</span><span class="p">)</span>
+        <span class="n">books</span><span class="p">[</span><span class="n">book</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book Returned&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span><span class="n">View</span><span class="w"> </span><span class="n">Books</span>
+<span class="mf">2.</span><span class="n">Borrow</span><span class="w"> </span><span class="n">Book</span>
+<span class="mf">3.</span><span class="kr">Return</span><span class="w"> </span><span class="n">Book</span>
+<span class="mf">4.</span><span class="n">Exit</span>
+
+
+<span class="n">Choice</span><span class="p">:</span><span class="w">  </span><span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">passwords</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1.Add&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2.View&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3.Exit&quot;</span><span class="p">)</span>
+
+    <span class="n">ch</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choice: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ch</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+        <span class="n">website</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Website: &quot;</span><span class="p">)</span>
+        <span class="n">pwd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
+        <span class="n">passwords</span><span class="p">[</span><span class="n">website</span><span class="p">]</span> <span class="o">=</span> <span class="n">pwd</span>
+
+    <span class="k">elif</span> <span class="n">ch</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">site</span><span class="p">,</span> <span class="n">pwd</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">pwd</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span><span class="n">Add</span>
+<span class="mf">2.</span><span class="n">View</span>
+<span class="mf">3.</span><span class="n">Exit</span>
+
+
+<span class="n">Choice</span><span class="p">:</span><span class="w">  </span><span class="mf">1</span>
+<span class="n">Website</span><span class="p">:</span><span class="w">  </span><span class="mf">4</span>
+<span class="n">Password</span><span class="p">:</span><span class="w">  </span><span class="mf">890</span>
+
+
+
+<span class="mf">1.</span><span class="n">Add</span>
+<span class="mf">2.</span><span class="n">View</span>
+<span class="mf">3.</span><span class="n">Exit</span>
+
+
+<span class="n">Choice</span><span class="p">:</span><span class="w">  </span><span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
